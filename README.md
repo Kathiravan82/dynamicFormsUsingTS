@@ -1,6 +1,6 @@
 # Dynamic Forms - NPM Package
 
-This project is a simple Google Forms-like application built using TypeScript, HTML, and CSS. 
+This project is a simple Google Forms-like application built using TypeScript, HTML, and Tailwind CSS. 
 It allows users to dynamically create forms, add different field types, store form data, and submit responses.
 
 ## Features
@@ -10,11 +10,28 @@ It allows users to dynamically create forms, add different field types, store fo
 - **Form Submission**: Submit responses and store them locally.
 - **NPM Package Ready**: Can be installed and used in other projects.
 
-## Installation
+
+## Running the Project Locally
+
+
+npm install
+npx webpack --config webpack.config.js
+npx http-server public 
+
+
+## Installation on other Projects
 ```sh```
 npm install dynamicforms-kathiravan
-git clone https://github.com/your-username/google-form-clone.git
-  cd google-form-clone
-  npm install
-  npm run build
-  npm start
+
+## update it on index.ts file
+import { FormBuilder, FormRenderer } from 'dynamicforms-kathiravan';
+
+const formBuilder = new FormBuilder('form-builder-container');
+const formRenderer = new FormRenderer('form-container');
+
+
+## Publish your repo 
+## Versioning: Make sure you update the version number in package.json before publishing. npm will not allow you to publish the same version number twice.
+npx webpack --config webpack.config.js
+npm login
+npm publish --access public

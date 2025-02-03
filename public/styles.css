@@ -1,2 +1,25 @@
-body { font-family: Arial, sans-serif; margin: 20px; }
-input, select, button { display: block; margin: 10px 0; padding: 10px; }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Styling */
+body {
+    @apply bg-gray-100 text-gray-900 font-sans;
+}
+
+input, select, button {
+    @apply block w-full border border-gray-300 rounded-md p-2 mt-2;
+}
+
+.buttonBlock {
+    @apply flex items-center space-x-2;
+    
+}
+
+button {
+    @apply bg-green-500 text-white px-4 py-2 rounded-md transition duration-300;
+}
+
+button:hover {
+    @apply bg-green-600;
+}
